@@ -1,0 +1,18 @@
+<h2>Play</h2>
+<div class="well text-center" ng-if="resultName.length">
+	<h1>{{ resultName }}</h1>
+</div>
+<div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{ donePlayers.length }}" aria-valuemin="0" aria-valuemax="{{ players.length }}"
+         style="min-width: 2em; width: {{ donePlayers.length/players.length*100 }}%">
+        <span ng-repeat="player in donePlayers">{{ player.name }}{{$last ? '' : ', '}}</span>
+    </div>
+</div>
+
+<div class="alert alert-info" ng-if="!resultName.length">Please press the button below to start.</div>
+<div class="alert alert-success" ng-if="!remainingPlayers.length">All done!</div>
+
+<p class="text-center">
+    <button type="button" class="btn btn-primary btn-lg" ng-click="play()" ng-if="remainingPlayers.length">Next Player</button>
+    <button type="button" class="btn btn-default btn-lg" ng-click="newGame()" ng-if="!remainingPlayers.length">Start New Game</button>
+</p>
