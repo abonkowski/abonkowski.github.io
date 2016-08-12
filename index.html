@@ -17,34 +17,18 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="app/lib/underscore-min.js"></script>
-    <script src="app/lib/angular.min.js"></script>
-    <script src="app/lib/angular-route.min.js"></script>
-    <script src="app/js/app.js"></script>
-    <script src="app/js/controllers.js"></script>
-    <script src="app/js/services.js"></script>
+    <style>
+      .container {
+        margin-top: 20px;
+      }
+    </style>
 
   </head>
   <body>
 
-      <div class="container">
-        <div class="header clearfix">
-          <nav>
-            <ul class="nav nav-pills pull-right">
-              <li role="presentation"><a href="#/play">Play</a></li>
-              <li role="presentation"><a href="#/manage-players">Manage Players</a></li>
-            </ul>
-          </nav>
-          <h3 class="text-muted">Standup Roulette</h3>
-        </div>
+      <div class="container text-center">
 
-        <div class="jumbotron">
-          <div ng-view></div>
-        </div>
-
-        <footer class="footer">
-          <p>&copy; 2015 Standup Roulette.</p>
-        </footer>
+        <a class="btn btn-primary btn-lg" href="/app">Play Standup Roulette</a>
 
       </div> <!-- /container -->
 
